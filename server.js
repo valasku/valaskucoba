@@ -1,4 +1,6 @@
 
+var myport = process.env.PORT || 3000;
+console.log("Port is : "+myport);
 var http = require('http');
 var express = require('express');
 var WSS = require('ws').Server;
@@ -6,14 +8,14 @@ var WSS = require('ws').Server;
 var app = express().use(express.static('public'));
 var server = http.createServer(app);
 
-const myport = process.env.PORT || 3000;
+
 
 var server = http.createServer(app);
 //server.listen(process.env.PORT || 3000);
 server.listen(port ,function(){
     console.log("up and running on port "+ port);
 });
-console.log(myport);
+
 var wss = new WSS({ port: myport });
 wss.on('connection', function(socket) {
   console.log('Opened Connection 🎉');
