@@ -12,8 +12,8 @@ var server = http.createServer(app);
 
 var server = http.createServer(app);
 //server.listen(process.env.PORT || 3000);
-server.listen(port ,function(){
-    console.log("up and running on port "+ port);
+server.listen(myport ,function(){
+    console.log("up and running on port "+ myport);
 });
 
 var wss = new WSS({ port: myport });
