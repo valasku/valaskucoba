@@ -4,8 +4,7 @@
   "description": "coba",
   "main": "index.js",
   "scripts": {
-    "start": "node --harmony index.js",
-    "build": "webpack"
+    "start": "node --harmony index.js"
   },
   "engines": {
     "node": "12.13.0"
