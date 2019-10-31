@@ -1,5 +1,5 @@
 
-var myport = process.env.PORT || 3000;
+var myport = process.env.PORT || 8081;
 console.log("Port is : "+myport);
 var http = require('http');
 var express = require('express');
@@ -8,7 +8,8 @@ var WSS = require('ws').Server;
 var app = express().use(express.static('public'));
 var server = http.createServer(app);
 
-server.listen(myport, 'https://valaskudemo.herokuapp.com');
+server.listen(myport);
+
 
 
 var wss = new WSS({ port: myport });
