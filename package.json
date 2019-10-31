@@ -1,6 +1,6 @@
 {
   "name": "valaskucoba",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "coba",
   "main": "index.js",
   "scripts": {
@@ -10,10 +10,11 @@
     "node": "12.13.0"
   },
   "heroku-run-build-script": true,
-  "author": "",
+  "author": "valasku",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "http": "0.0.0",
     "mysql": "^2.17.1",
     "request": "^2.88.0",
     "ws": "^7.2.0"
