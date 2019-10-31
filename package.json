@@ -4,9 +4,10 @@
   "description": "coba",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node --harmony index.js",
     "build": "webpack"
   },
+  "heroku-run-build-script": true,
   "author": "",
   "license": "ISC",
   "dependencies": {
