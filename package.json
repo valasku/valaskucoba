@@ -4,7 +4,7 @@
   "description": "coba",
   "main": "index.js",
   "scripts": {
-    "start": "node --harmony index.js"
+    "start": "node server.js"
   },
   "engines": {
     "node": "12.13.0"
@@ -18,5 +18,7 @@
     "mysql": "^2.17.1",
     "request": "^2.88.0",
     "ws": "^7.2.0"
-  }
+  },
+  "devDependencies": {},
+  "keywords": []
 }
