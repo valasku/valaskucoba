@@ -8,7 +8,11 @@ var server = http.createServer(app);
 
 const myport = process.env.PORT || 3000;
 
-server.listen(myport, '127.0.0.1');
+var server = http.createServer(app);
+//server.listen(process.env.PORT || 3000);
+server.listen(port ,function(){
+    console.log("up and running on port "+ port);
+});
 console.log(myport);
 var wss = new WSS({ port: myport });
 wss.on('connection', function(socket) {
