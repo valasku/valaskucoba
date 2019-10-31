@@ -7,6 +7,9 @@
     "start": "node --harmony index.js",
     "build": "webpack"
   },
+  "engines": {
+    "node": "12.13.0"
+  },
   "heroku-run-build-script": true,
   "author": "",
   "license": "ISC",
