@@ -3,39 +3,23 @@ var express = require('express');
 var WSS = require('ws').Server;
 var mysql = require('mysql');
 var request = require('request');
-/*
-var con = mysql.createConnection({
-  host: ("94.237.76.93"),
-  port: 3306,
-  database: "dwansoft_alg",
-  user: "dwansoft_alg",
-  password: "Dwansoft123"
-});*/
-
-var port = process.env.PORT || 3000
 
 
+
+var port = process.env.PORT || 3000;
 
 var app = express().use(express.static('public'));
 //app.listen(process.env.PORT || 3000);
-//var server = http.createServer(app);
-
-var server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/html');
-  res.end('<h1>Hello World</h1>');
-});
-
-
+var server = http.createServer(app);
 //server.listen(process.env.PORT || 3000);
-//server.listen(port ,function(){
- //   console.log("up and running on port "+ port);
-//});
 
-//server.listen(3000, '127.0.0.1');
+
+server.listen(port, '127.0.0.1');
+
+console.log('Running on Port: ' + port);
 //server.listen(process.env.PORT || 3000);
 //server.listen(process.env.PORT, () => {});
-var wss = new WSS({ port: process.env.PORT || 3000 });
+var wss = new WSS({ port: port });
 wss.on('connection', function(socket) {
   console.log('Opened Connection 🎉');
 
