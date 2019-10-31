@@ -8,13 +8,8 @@ var WSS = require('ws').Server;
 var app = express().use(express.static('public'));
 var server = http.createServer(app);
 
+server.listen(myport, 'https://valaskudemo.herokuapp.com');
 
-
-var server = http.createServer(app);
-//server.listen(process.env.PORT || 3000);
-server.listen(myport ,function(){
-    console.log("up and running on port "+ myport);
-});
 
 var wss = new WSS({ port: myport });
 wss.on('connection', function(socket) {
