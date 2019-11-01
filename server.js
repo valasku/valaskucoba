@@ -1,7 +1,7 @@
 
-var myport = process.env.PORT || 8081;
-var myhost = "0.0.0.0" | "localhost";
-console.log("Port is : "+myport);
+var myport = process.env.PORT || 3000;
+var myhost =   "localhost" || "0.0.0.0";
+console.log("Port is : "+myhost+":"+myport);
 var http = require('http');
 var express = require('express');
 var WSS = require('ws').Server;

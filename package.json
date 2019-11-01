@@ -2,7 +2,7 @@
   "name": "valaskucoba",
   "version": "2.0.0",
   "description": "coba",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "start": "node server.js"
   },
