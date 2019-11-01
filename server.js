@@ -11,21 +11,21 @@ var WSS = require('ws').Server;
 var mysql = require('mysql');
 var request = require('request');
 
-var app = express().use(express.static('public'));
+//var app = express().use(express.static('public'));
 //app.listen(process.env.PORT || 3000);
 //var server = http.createServer(app);
 
-var server = http.createServer((app, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/html');
-  res.end('<h1>Hello World</h1>');
-});
+//var server = http.createServer((app, res) => {
+  //res.statusCode = 200;
+  //res.setHeader('Content-Type', 'text/html');
+  //res.end('<h1>Hello World</h1>');
+//});
 
-server.listen(myport ,function(){
-   console.log("up and running on port "+ "Port is : "+myhost+":"+myport);
-});
+//server.listen(myport ,function(){
+  // console.log("up and running on port "+ "Port is : "+myhost+":"+myport);
+//});
 
-var wss = new WSS({ port: "40510" });
+var wss = new WSS({ port: myport });
 wss.on('connection', function(socket) {
   console.log('Opened Connection 🎉');
 
@@ -92,7 +92,5 @@ var broadcast = function() {
     client.send(json);
     console.log('Sent: ' + json);
   });
-
-  
 }
 setInterval(broadcast, 1000);
