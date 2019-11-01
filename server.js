@@ -24,18 +24,8 @@ var server = http.createServer((app, res) => {
 server.listen(myport ,function(){
    console.log("up and running on port "+ "Port is : "+myhost+":"+myport);
 });
-return;
 
-
-//server.listen(process.env.PORT || 3000);
-//server.listen(port ,function(){
- //   console.log("up and running on port "+ port);
-//});
-
-//server.listen(3000, '127.0.0.1');
-//server.listen(process.env.PORT || 3000);
-//server.listen(process.env.PORT, () => {});
-var wss = new WSS({ port: myport });
+var wss = new WSS({ port: "40510" });
 wss.on('connection', function(socket) {
   console.log('Opened Connection 🎉');
 
