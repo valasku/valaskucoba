@@ -1,5 +1,6 @@
 
 var myport = process.env.PORT || 8081;
+var myhost = "0.0.0.0" | "localhost";
 console.log("Port is : "+myport);
 var http = require('http');
 var express = require('express');
@@ -8,7 +9,7 @@ var WSS = require('ws').Server;
 var app = express().use(express.static('public'));
 var server = http.createServer(app);
 
-server.listen(myport);
+server.listen(myport,myhost);
 
 
 
