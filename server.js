@@ -1,6 +1,6 @@
 
-var myport = process.env.PORT || 3000;
-var myhost =   "localhost" || "0.0.0.0";
+var myport = process.env.PORT || 80;
+var myhost =   "0.0.0.0";
 console.log("Port is : "+myhost+":"+myport);
 var http = require('http');
 var express = require('express');
